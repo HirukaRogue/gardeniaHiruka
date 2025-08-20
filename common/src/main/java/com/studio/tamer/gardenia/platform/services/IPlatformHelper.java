@@ -1,4 +1,4 @@
-package com.example.examplemod.platform.services;
+package com.studio.tamer.gardenia.platform.services;
 
 public interface IPlatformHelper {
 

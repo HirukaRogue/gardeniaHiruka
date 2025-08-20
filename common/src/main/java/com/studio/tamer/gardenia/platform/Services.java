@@ -1,7 +1,7 @@
-package com.example.examplemod.platform;
+package com.studio.tamer.gardenia.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.studio.tamer.gardenia.Constants;
+import com.studio.tamer.gardenia.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 

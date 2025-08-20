@@ -1,6 +1,6 @@
-package com.example.examplemod.platform;
+package com.studio.tamer.gardenia.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.studio.tamer.gardenia.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 

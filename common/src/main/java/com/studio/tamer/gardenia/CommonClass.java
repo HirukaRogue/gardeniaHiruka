@@ -1,6 +1,6 @@
-package com.example.examplemod;
+package com.studio.tamer.gardenia;
 
-import com.example.examplemod.platform.Services;
+import com.studio.tamer.gardenia.platform.Services;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Items;
 

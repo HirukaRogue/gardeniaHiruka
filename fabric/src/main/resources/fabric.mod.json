@@ -8,15 +8,15 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://github.com/mopsy14/gardenia",
+        "sources": "https://github.com/mopsy14/gardenia"
     },
     "license": "${license}",
-    "icon": "assets/modid/${mod_id}.png",
+    "icon": "assets/${mod_id}/${mod_id}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+          "com.studio.tamer.gardenia.FabricGardenia"
         ]
     },
     "mixins": [
@@ -28,9 +28,6 @@
         "fabric": "*",
         "minecraft": "${minecraft_version}",
         "java": ">=17"
-    },
-    "suggests": {
-        "another-mod": "*"
     }
 }
   
