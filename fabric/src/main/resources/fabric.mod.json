@@ -12,11 +12,14 @@
         "sources": "https://github.com/mopsy14/gardenia"
     },
     "license": "${license}",
-    "icon": "assets/${mod_id}/${mod_id}.png",
+    "icon": "assets/${mod_id}/${mod_id}_icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
           "com.studio.tamer.gardenia.FabricGardenia"
+        ],
+        "client": [
+          "com.studio.tamer.gardenia.FabricGardeniaClient"
         ]
     },
     "mixins": [

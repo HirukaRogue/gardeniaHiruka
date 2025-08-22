@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "gardenia:block/soulweed_bottom"
+    },
+    "half=upper": {
+      "model": "gardenia:block/soulweed_top"
+    }
+  }
+}

@@ -1,5 +1,10 @@
 package com.studio.tamer.gardenia.platform.services;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+
+import java.util.function.Function;
+
 public interface IPlatformHelper {
 
     /**
@@ -33,4 +38,6 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+    CreativeModeTab registerTab(ResourceLocation resourceLocation, Function<CreativeModeTab.Builder,CreativeModeTab> creativeTabOptions);
 }

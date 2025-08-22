@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "gardenia:block/pink_fireweed_bottom"
+    },
+    "half=upper": {
+      "model": "gardenia:block/pink_fireweed_top"
+    }
+  }
+}
