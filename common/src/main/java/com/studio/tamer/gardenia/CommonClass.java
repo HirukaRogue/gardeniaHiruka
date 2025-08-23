@@ -1,11 +1,13 @@
 package com.studio.tamer.gardenia;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
+import com.studio.tamer.gardenia.items.ModdedItems;
 import com.studio.tamer.gardenia.platform.Services;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
@@ -14,9 +16,12 @@ import net.minecraft.world.item.ItemStack;
 // however it will be compatible with all supported mod loaders.
 public class CommonClass {
     public static CreativeModeTab creativeTab = Services.PLATFORM.registerTab(new ResourceLocation("gardenia","gardenia_creative_tab"), (builder) -> {return builder
-            .icon(()-> new ItemStack(ModdedBlocks.WAX_FLOWER))
+            .icon(()-> new ItemStack(ModdedItems.MOD_ICON))
             .displayItems(((parameters, output) -> {
                 for (BlockItem item : ModdedBlocks.blockItems) {
+                    output.accept(item);
+                }
+                for (Item item : ModdedItems.itemList) {
                     output.accept(item);
                 }
             }))

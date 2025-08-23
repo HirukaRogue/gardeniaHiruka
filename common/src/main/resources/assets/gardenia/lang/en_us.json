@@ -1,3 +1,13 @@
 {
-  "creativetab.gardenia": "Gardenia"
+  "creativetab.gardenia": "Gardenia",
+  "block.gardenia.blood_poppy": "Blood Poppy",
+  "block.gardenia.fire_lily": "Fire Lily",
+  "block.gardenia.midnight_moonbloom": "Midnight Moonbloom",
+  "block.gardenia.mint_skylight": "Mint Skylight",
+  "block.gardenia.pink_fireweed": "Pink Fireweed",
+  "block.gardenia.red_fireweed": "Red Fireweed",
+  "block.gardenia.roseate_bloom": "Roseate Bloom",
+  "block.gardenia.soulbulbs": "Soulbulbs",
+  "block.gardenia.soulweed": "Soul Weed",
+  "block.gardenia.wax_flower": "Wax Flower"
 }

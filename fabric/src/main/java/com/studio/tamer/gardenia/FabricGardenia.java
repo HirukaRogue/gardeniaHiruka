@@ -1,6 +1,9 @@
 package com.studio.tamer.gardenia;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
+import com.studio.tamer.gardenia.generation.PlacementModifiers;
+import com.studio.tamer.gardenia.generation.WorldGeneration;
+import com.studio.tamer.gardenia.items.ModdedItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -22,5 +25,12 @@ public class FabricGardenia implements ModInitializer {
             ModdedBlocks.blockItems.add(Registry.register(BuiltInRegistries.ITEM,blockEntry.getKey(), new BlockItem(blockEntry.getValue(), new Item.Properties())));
         }
 
+        for (Map.Entry<ResourceLocation, Item> itemEntry : ModdedItems.getItemListWithID()) {
+            ModdedItems.itemList.add(Registry.register(BuiltInRegistries.ITEM,itemEntry.getKey(),itemEntry.getValue()));
+        }
+        ModdedItems.itemList.remove(ModdedItems.MOD_ICON);
+
+        PlacementModifiers.regPlacementModifiers();
+        WorldGeneration.generateModWorldGen();
     }
 }

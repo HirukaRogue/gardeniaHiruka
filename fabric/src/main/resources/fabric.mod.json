@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "mod_id",
+    "id": "${mod_id}",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
@@ -16,10 +16,13 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-          "com.studio.tamer.gardenia.FabricGardenia"
+            "com.studio.tamer.gardenia.FabricGardenia"
         ],
         "client": [
-          "com.studio.tamer.gardenia.FabricGardeniaClient"
+            "com.studio.tamer.gardenia.FabricGardeniaClient"
+        ],
+        "fabric-datagen": [
+            "com.studio.tamer.gardenia.FabricGardeniaDataGen"
         ]
     },
     "mixins": [

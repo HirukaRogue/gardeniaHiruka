@@ -22,19 +22,19 @@ public class ModdedBlocks {
     public static final Block FIRE_LILY = new FlowerBlock(MobEffects.POISON, 12, DEFAULT_FLOWER_PROPS);
     public static final Block MIDNIGHT_MOONBLOOM = new FlowerBlock(MobEffects.NIGHT_VISION, 12, DEFAULT_FLOWER_PROPS);
     public static final Block MINT_SKYLIGHT = new FlowerBlock(MobEffects.FIRE_RESISTANCE, 4, DEFAULT_FLOWER_PROPS);
+    public static final Block ROSEATE_BLOOM = new FlowerBlock(MobEffects.WEAKNESS, 9, DEFAULT_FLOWER_PROPS);
+    public static final Block WAX_FLOWER = new FlowerBlock(MobEffects.SATURATION, 7, DEFAULT_FLOWER_PROPS);
     public static final Block PINK_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
     public static final Block RED_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
-    public static final Block ROSEATE_BLOOM = new FlowerBlock(MobEffects.WEAKNESS, 9, DEFAULT_FLOWER_PROPS);
-    public static final Block SOULBULBS = new FlowerBlock(MobEffects.INVISIBILITY, 5, DEFAULT_FLOWER_PROPS);
-    public static final Block SOULWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
-    public static final Block WAX_FLOWER = new FlowerBlock(MobEffects.SATURATION, 7,DEFAULT_FLOWER_PROPS);
+    public static final Block SOULBULBS = new SoulSandFlower(MobEffects.INVISIBILITY, 5, DEFAULT_FLOWER_PROPS);
+    public static final Block SOULWEED = new TallSoulSandFlower(DEFAULT_FLOWER_PROPS);
 
     public static List<BlockItem> blockItems = new ArrayList<>();
-    private static Set<Map.Entry<ResourceLocation, Block>> blocksListCache = null;
+    private static Set<Map.Entry<ResourceLocation, Block>> blockListCache = null;
 
     public static Set<Map.Entry<ResourceLocation, Block>> getBlockListWithID() {
-        if (blocksListCache == null)
-            blocksListCache = Set.of(
+        if (blockListCache == null)
+            blockListCache = Set.of(
                     Map.entry(getLoc("blood_poppy"), BLOOD_POPPY),
                     Map.entry(getLoc("fire_lily"), FIRE_LILY),
                     Map.entry(getLoc("midnight_moonbloom"), MIDNIGHT_MOONBLOOM),
@@ -46,7 +46,7 @@ public class ModdedBlocks {
                     Map.entry(getLoc("soulweed"), SOULWEED),
                     Map.entry(getLoc("wax_flower"), WAX_FLOWER)
             );
-        return blocksListCache;
+        return blockListCache;
     }
     private static ResourceLocation getLoc(String id){
         return new ResourceLocation("gardenia", id);

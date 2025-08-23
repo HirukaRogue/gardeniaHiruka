@@ -1,0 +1,31 @@
+{
+  "feature": "gardenia:wax_flower",
+  "placement": [
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "gardenia:block_proximity_check",
+      "max_steps": 8,
+      "target_block": {
+        "type": "minecraft:matching_block_tag",
+        "tag": "minecraft:beehives"
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}
