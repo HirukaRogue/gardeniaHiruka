@@ -15,7 +15,7 @@ public class TallSoulSandFlower extends TallFlowerBlock {
 
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.is(Blocks.SOUL_SAND);
+        return state.is(Blocks.SOUL_SAND) || state.is(Blocks.SOUL_SOIL);
     }
 
     @Override
