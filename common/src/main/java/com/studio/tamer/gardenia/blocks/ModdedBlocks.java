@@ -29,13 +29,10 @@ public class ModdedBlocks {
     public static final Block WAX_FLOWER = new FlowerBlock(MobEffects.SATURATION, 7, DEFAULT_FLOWER_PROPS);
     public static final Block WAX_FLOWER_POT = new FlowerPotBlock(WAX_FLOWER, DEFAULT_FLOWER_POT_PROPS);
     public static final Block PINK_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
-    public static final Block PINK_FIREWEED_POT = new FlowerPotBlock(PINK_FIREWEED, DEFAULT_FLOWER_POT_PROPS);
     public static final Block RED_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
-    public static final Block RED_FIREWEED_POT = new FlowerPotBlock(RED_FIREWEED, DEFAULT_FLOWER_POT_PROPS);
     public static final Block SOULBULBS = new SoulSandFlower(MobEffects.INVISIBILITY, 5, DEFAULT_FLOWER_PROPS);
     public static final Block SOULBULBS_POT = new FlowerPotBlock(SOULBULBS, DEFAULT_FLOWER_POT_PROPS);
     public static final Block SOULWEED = new TallSoulSandFlower(DEFAULT_FLOWER_PROPS);
-    public static final Block SOULWEED_POT = new FlowerPotBlock(SOULWEED, DEFAULT_FLOWER_POT_PROPS);
 
     public static List<BlockItem> blockItems = new ArrayList<>();
     private static Set<Map.Entry<ResourceLocation, Block>> blockListCache = null;
@@ -52,15 +49,12 @@ public class ModdedBlocks {
                     Map.entry(getLoc("mint_skylight"), MINT_SKYLIGHT),
                     Map.entry(getLoc("mint_skylight_pot"), MINT_SKYLIGHT_POT),
                     Map.entry(getLoc("pink_fireweed"), PINK_FIREWEED),
-                    Map.entry(getLoc("pink_fireweed_pot"), PINK_FIREWEED_POT),
                     Map.entry(getLoc("red_fireweed"), RED_FIREWEED),
-                    Map.entry(getLoc("red_fireweed_pot"), RED_FIREWEED_POT),
                     Map.entry(getLoc("roseate_bloom"), ROSEATE_BLOOM),
                     Map.entry(getLoc("roseate_bloom_pot"), ROSEATE_BLOOM_POT),
                     Map.entry(getLoc("soulbulbs"), SOULBULBS),
                     Map.entry(getLoc("soulbulbs_pot"), SOULBULBS_POT),
                     Map.entry(getLoc("soulweed"), SOULWEED),
-                    Map.entry(getLoc("soulweed_pot"), SOULWEED_POT),
                     Map.entry(getLoc("wax_flower"), WAX_FLOWER),
                     Map.entry(getLoc("wax_flower_pot"), WAX_FLOWER_POT)
             );
