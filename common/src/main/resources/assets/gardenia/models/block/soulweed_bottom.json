@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "gardenia:block/soulweed_bottom"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }

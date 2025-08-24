@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "gardenia:block/mint_skylight"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }

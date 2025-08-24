@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "gardenia:block/wax_flower"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }

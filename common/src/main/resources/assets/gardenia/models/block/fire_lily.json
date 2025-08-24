@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "gardenia:block/fire_lily"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }

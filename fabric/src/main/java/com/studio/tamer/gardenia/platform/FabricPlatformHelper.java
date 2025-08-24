@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class FabricPlatformHelper implements IPlatformHelper {
 
@@ -30,7 +31,8 @@ public class FabricPlatformHelper implements IPlatformHelper {
     }
 
     @Override
-    public CreativeModeTab registerTab(ResourceLocation resourceLocation, Function<CreativeModeTab.Builder, CreativeModeTab> creativeTabOptions) {
-        return Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, resourceLocation, creativeTabOptions.apply(FabricItemGroup.builder()));
+    public Supplier<CreativeModeTab> registerTab(ResourceLocation resourceLocation, Function<CreativeModeTab.Builder, CreativeModeTab> creativeTabOptions) {
+        CreativeModeTab creativeModeTab = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, resourceLocation, creativeTabOptions.apply(FabricItemGroup.builder()));
+        return ()-> creativeModeTab;
     }
 }

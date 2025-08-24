@@ -4,6 +4,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public interface IPlatformHelper {
 
@@ -39,5 +40,5 @@ public interface IPlatformHelper {
         return isDevelopmentEnvironment() ? "development" : "production";
     }
 
-    CreativeModeTab registerTab(ResourceLocation resourceLocation, Function<CreativeModeTab.Builder,CreativeModeTab> creativeTabOptions);
+    Supplier<CreativeModeTab> registerTab(ResourceLocation resourceLocation, Function<CreativeModeTab.Builder,CreativeModeTab> creativeTabOptions);
 }

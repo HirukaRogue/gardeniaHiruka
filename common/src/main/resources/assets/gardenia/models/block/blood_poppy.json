@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "gardenia:block/blood_poppy"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }

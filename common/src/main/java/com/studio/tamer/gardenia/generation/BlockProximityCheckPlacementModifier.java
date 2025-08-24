@@ -9,10 +9,11 @@ import net.minecraft.world.level.levelgen.placement.PlacementContext;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraft.world.level.levelgen.placement.PlacementModifierType;
 
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 public class BlockProximityCheckPlacementModifier extends PlacementModifier {
-    public static PlacementModifierType<BlockProximityCheckPlacementModifier> BLOCK_PROXIMITY_CHECK = null;
+    public static Supplier<PlacementModifierType<BlockProximityCheckPlacementModifier>> BLOCK_PROXIMITY_CHECK = null;
     private final BlockPredicate targetBlock;
     private final int range;
 
@@ -48,6 +49,6 @@ public class BlockProximityCheckPlacementModifier extends PlacementModifier {
 
     @Override
     public PlacementModifierType<?> type() {
-        return BLOCK_PROXIMITY_CHECK;
+        return BLOCK_PROXIMITY_CHECK.get();
     }
 }

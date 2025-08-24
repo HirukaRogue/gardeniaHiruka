@@ -32,34 +32,34 @@ public class PlacedFeatures {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         context.register(BLOOD_POPPY_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.BLOOD_POPPY_KEY), List.of(
-                RarityFilter.onAverageOnceEvery(12),
+                RarityFilter.onAverageOnceEvery(3),
                 InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP,
-                CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 2)),
+                PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                RarityFilter.onAverageOnceEvery(4),
                 BiomeFilter.biome())));
         context.register(FIRE_LILY_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.FIRE_LILY_KEY), List.of(
-                RarityFilter.onAverageOnceEvery(12),
+                RarityFilter.onAverageOnceEvery(8),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP,
                 CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 2)),
                 BiomeFilter.biome())));
         context.register(MIDNIGHT_MOONBLOOM_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.MIDNIGHT_MOONBLOOM_KEY), List.of(
-                RarityFilter.onAverageOnceEvery(12),
+                RarityFilter.onAverageOnceEvery(5),
                 InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP,
-                CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 2)),
+                RarityFilter.onAverageOnceEvery(4),
+                PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                 BiomeFilter.biome())));
         context.register(MINT_SKYLIGHT_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.MINT_SKYLIGHT_KEY), List.of(
-                RarityFilter.onAverageOnceEvery(12),
+                RarityFilter.onAverageOnceEvery(5),
                 InSquarePlacement.spread(),
-                PlacementUtils.HEIGHTMAP,
-                CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 2)),
+                RarityFilter.onAverageOnceEvery(2),
+                PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                 BiomeFilter.biome())));
         context.register(ROSEATE_BLOOM_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.ROSEATE_BLOOM_KEY), List.of(
                 RarityFilter.onAverageOnceEvery(6),
                 InSquarePlacement.spread(),
+                RarityFilter.onAverageOnceEvery(2),
                 PlacementUtils.HEIGHTMAP,
-                CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 2)),
                 BiomeFilter.biome())));
         context.register(WAX_FLOWER_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.WAX_FLOWER_KEY), List.of(
                 PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
@@ -71,14 +71,14 @@ public class PlacedFeatures {
         context.register(PINK_FIREWEED_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.PINK_FIREWEED_KEY), List.of(
                 RarityFilter.onAverageOnceEvery(12),
                 InSquarePlacement.spread(),
+                RarityFilter.onAverageOnceEvery(2),
                 PlacementUtils.HEIGHTMAP,
-                CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 2)),
                 BiomeFilter.biome())));
         context.register(RED_FIREWEED_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.RED_FIREWEED_KEY), List.of(
                 RarityFilter.onAverageOnceEvery(12),
                 InSquarePlacement.spread(),
+                RarityFilter.onAverageOnceEvery(2),
                 PlacementUtils.HEIGHTMAP,
-                CountPlacement.of(ClampedInt.of(UniformInt.of(-1, 3), 0, 2)),
                 BiomeFilter.biome())));
         context.register(SOULBULBS_KEY, new PlacedFeature(configuredFeatures.getOrThrow(ConfiguredFeatures.SOULBULBS_KEY), List.of(
                 RarityFilter.onAverageOnceEvery(2),

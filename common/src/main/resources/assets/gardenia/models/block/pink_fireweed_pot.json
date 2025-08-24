@@ -1,0 +1,8 @@
+{
+  "parent": "gardenia:block/flower_pot_tall_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "plant_lower": "gardenia:block/pink_fireweed_bottom",
+    "plant_upper": "gardenia:block/pink_fireweed_top"
+  }
+}

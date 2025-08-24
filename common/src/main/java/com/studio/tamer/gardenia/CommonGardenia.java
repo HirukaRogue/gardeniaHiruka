@@ -9,17 +9,21 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.FlowerPotBlock;
+
+import java.util.function.Supplier;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide
 // common compatible binaries. This means common code can not directly use loader specific concepts such as Forge events
 // however it will be compatible with all supported mod loaders.
-public class CommonClass {
-    public static CreativeModeTab creativeTab = Services.PLATFORM.registerTab(new ResourceLocation("gardenia","gardenia_creative_tab"), (builder) -> {return builder
+public class CommonGardenia {
+    public static Supplier<CreativeModeTab> creativeTab = Services.PLATFORM.registerTab(new ResourceLocation("gardenia","gardenia_creative_tab"), (builder) -> {return builder
             .icon(()-> new ItemStack(ModdedItems.MOD_ICON))
             .displayItems(((parameters, output) -> {
                 for (BlockItem item : ModdedBlocks.blockItems) {
-                    output.accept(item);
+                    if (!(item.getBlock() instanceof FlowerPotBlock))
+                        output.accept(item);
                 }
                 for (Item item : ModdedItems.itemList) {
                     output.accept(item);

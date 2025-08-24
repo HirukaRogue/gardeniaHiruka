@@ -1,7 +1,7 @@
 package com.studio.tamer.gardenia;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
-import com.studio.tamer.gardenia.generation.PlacementModifiers;
+import com.studio.tamer.gardenia.generation.FabricPlacementModifiers;
 import com.studio.tamer.gardenia.generation.WorldGeneration;
 import com.studio.tamer.gardenia.items.ModdedItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,7 +18,7 @@ public class FabricGardenia implements ModInitializer {
     
     @Override
     public void onInitialize() {
-        CommonClass.init();
+        CommonGardenia.init();
 
         for (Map.Entry<ResourceLocation, Block> blockEntry : ModdedBlocks.getBlockListWithID()) {
             Registry.register(BuiltInRegistries.BLOCK,blockEntry.getKey(),blockEntry.getValue());
@@ -30,7 +30,7 @@ public class FabricGardenia implements ModInitializer {
         }
         ModdedItems.itemList.remove(ModdedItems.MOD_ICON);
 
-        PlacementModifiers.regPlacementModifiers();
+        FabricPlacementModifiers.regPlacementModifiers();
         WorldGeneration.generateModWorldGen();
     }
 }

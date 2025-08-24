@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "gardenia:block/roseate_bloom"
-  }
+  },
+  "render_type": "minecraft:cutout"
 }
