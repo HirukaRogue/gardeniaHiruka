@@ -30,9 +30,9 @@ public class ModdedBlocks {
     public static final Block WAX_FLOWER_POT = new FlowerPotBlock(WAX_FLOWER, DEFAULT_FLOWER_POT_PROPS);
     public static final Block PINK_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
     public static final Block RED_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
-    public static final Block SOULBULBS = new SoulSandFlower(MobEffects.INVISIBILITY, 5, DEFAULT_FLOWER_PROPS);
-    public static final Block SOULBULBS_POT = new FlowerPotBlock(SOULBULBS, DEFAULT_FLOWER_POT_PROPS);
-    public static final Block SOULWEED = new TallSoulSandFlower(DEFAULT_FLOWER_PROPS);
+    public static final Block SOULBULBS = new SoulSandFlower(MobEffects.INVISIBILITY, 5, DEFAULT_FLOWER_PROPS.lightLevel((blockState) -> 4));
+    public static final Block SOULBULBS_POT = new FlowerPotBlock(SOULBULBS, DEFAULT_FLOWER_POT_PROPS.lightLevel((blockState) -> 4));
+    public static final Block SOULWEED = new TallSoulSandFlower(DEFAULT_FLOWER_PROPS.lightLevel((blockState) -> 4));
 
     public static List<BlockItem> blockItems = new ArrayList<>();
     private static Set<Map.Entry<ResourceLocation, Block>> blockListCache = null;
