@@ -15,6 +15,8 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
     public void generate() {
         dropSelf(ModdedBlocks.BLOOD_POPPY);
         dropPottedContents(ModdedBlocks.BLOOD_POPPY_POT);
+        dropSelf(ModdedBlocks.DOOM_POPPY);
+        dropPottedContents(ModdedBlocks.DOOM_POPPY_POT);
         dropSelf(ModdedBlocks.FIRE_LILY);
         dropPottedContents(ModdedBlocks.FIRE_LILY_POT);
         dropSelf(ModdedBlocks.MIDNIGHT_MOONBLOOM);
@@ -23,6 +25,10 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         dropPottedContents(ModdedBlocks.MINT_SKYLIGHT_POT);
         dropSelf(ModdedBlocks.ROSEATE_BLOOM);
         dropPottedContents(ModdedBlocks.ROSEATE_BLOOM_POT);
+        dropSelf(ModdedBlocks.DREAM_ROSE);
+        dropPottedContents(ModdedBlocks.DREAM_ROSE_POT);
+        dropSelf(ModdedBlocks.RED_ROSE);
+        dropPottedContents(ModdedBlocks.RED_ROSE_POT);
         dropSelf(ModdedBlocks.WAX_FLOWER);
         dropPottedContents(ModdedBlocks.WAX_FLOWER_POT);
         dropSelf(ModdedBlocks.SOULBULBS);

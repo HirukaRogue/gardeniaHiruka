@@ -1,9 +1,9 @@
 {
-  "feature": "gardenia:red_fireweed",
+  "feature": "gardenia:dream_rose",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 12
+      "chance": 25
     },
     {
       "type": "minecraft:biome"
@@ -13,7 +13,7 @@
     },
     {
       "type": "minecraft:rarity_filter",
-      "chance": 2
+      "chance": 3
     },
     {
       "type": "minecraft:heightmap",

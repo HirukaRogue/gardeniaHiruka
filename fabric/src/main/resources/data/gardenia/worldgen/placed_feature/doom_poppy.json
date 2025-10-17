@@ -1,0 +1,35 @@
+{
+  "feature": "gardenia:doom_poppy",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "gardenia:block_proximity_check",
+      "max_steps": 3,
+      "target_block": {
+        "type": "minecraft:matching_blocks",
+        "blocks": "minecraft:poppy"
+      }
+    },
+    {
+      "type": "minecraft:random_offset",
+      "xz_spread": {
+        "type": "minecraft:uniform",
+        "value": {
+          "max_inclusive": 3,
+          "min_inclusive": -3
+        }
+      },
+      "y_spread": 0
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    }
+  ]
+}

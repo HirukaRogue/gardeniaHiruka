@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "gardenia:block/doom_poppy"
+  },
+  "render_type": "minecraft:cutout"
+}

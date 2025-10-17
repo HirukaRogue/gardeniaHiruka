@@ -2,6 +2,9 @@
   "feature": "gardenia:wax_flower",
   "placement": [
     {
+      "type": "minecraft:biome"
+    },
+    {
       "type": "minecraft:heightmap",
       "heightmap": "WORLD_SURFACE_WG"
     },
@@ -23,9 +26,6 @@
     {
       "type": "minecraft:rarity_filter",
       "chance": 2
-    },
-    {
-      "type": "minecraft:biome"
     }
   ]
 }

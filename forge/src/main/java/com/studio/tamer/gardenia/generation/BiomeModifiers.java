@@ -15,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class BiomeModifiers {
     public static final ResourceKey<BiomeModifier> BLOOD_POPPY = registerKey("blood_poppy");
+    public static final ResourceKey<BiomeModifier> DOOM_POPPY = registerKey("doom_poppy");
     public static final ResourceKey<BiomeModifier> FIRE_LILY = registerKey("fire_lily");
     public static final ResourceKey<BiomeModifier> MIDNIGHT_MOONBLOOM = registerKey("midnight_moonbloom");
     public static final ResourceKey<BiomeModifier> MINT_SKYLIGHT = registerKey("mint_skylight");
@@ -22,6 +23,8 @@ public class BiomeModifiers {
     public static final ResourceKey<BiomeModifier> WAX_FLOWER = registerKey("wax_flower");
     public static final ResourceKey<BiomeModifier> PINK_FIREWEED = registerKey("pink_fireweed");
     public static final ResourceKey<BiomeModifier> RED_FIREWEED = registerKey("red_fireweed");
+    public static final ResourceKey<BiomeModifier> RED_ROSE = registerKey("red_rose");
+    public static final ResourceKey<BiomeModifier> DREAM_ROSE = registerKey("dream_rose");
     public static final ResourceKey<BiomeModifier> SOULBULBS = registerKey("soulbulbs");
     public static final ResourceKey<BiomeModifier> SOULWEED = registerKey("soulweed");
 
@@ -32,6 +35,10 @@ public class BiomeModifiers {
         context.register(BLOOD_POPPY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.DARK_FOREST)),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.BLOOD_POPPY_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(DOOM_POPPY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST), biomes.getOrThrow(Biomes.MEADOW)),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.DOOM_POPPY_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
         context.register(FIRE_LILY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.SPARSE_JUNGLE)),
@@ -60,6 +67,14 @@ public class BiomeModifiers {
         context.register(RED_FIREWEED, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.BIRCH_FOREST)),
                 HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.RED_FIREWEED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(RED_ROSE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST), biomes.getOrThrow(Biomes.MEADOW), biomes.getOrThrow(Biomes.SUNFLOWER_PLAINS)),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.RED_ROSE)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+        context.register(DREAM_ROSE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.FOREST), biomes.getOrThrow(Biomes.FLOWER_FOREST), biomes.getOrThrow(Biomes.MEADOW), biomes.getOrThrow(Biomes.SUNFLOWER_PLAINS)),
+                HolderSet.direct(placedFeatures.getOrThrow(PlacedFeatures.DREAM_ROSE)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
         context.register(SOULBULBS, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(

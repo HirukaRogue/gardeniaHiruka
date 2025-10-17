@@ -18,6 +18,8 @@ public class ModdedBlocks {
     private static final BlockBehaviour.Properties DEFAULT_FLOWER_POT_PROPS = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
     public static final Block BLOOD_POPPY = new FlowerBlock(MobEffects.NIGHT_VISION, 5, DEFAULT_FLOWER_PROPS);
     public static final Block BLOOD_POPPY_POT = new FlowerPotBlock(BLOOD_POPPY, DEFAULT_FLOWER_POT_PROPS);
+    public static final Block DOOM_POPPY = new FlowerBlock(MobEffects.NIGHT_VISION, 5, DEFAULT_FLOWER_PROPS);
+    public static final Block DOOM_POPPY_POT = new FlowerPotBlock(DOOM_POPPY, DEFAULT_FLOWER_POT_PROPS);
     public static final Block FIRE_LILY = new FlowerBlock(MobEffects.POISON, 12, DEFAULT_FLOWER_PROPS);
     public static final Block FIRE_LILY_POT = new FlowerPotBlock(FIRE_LILY, DEFAULT_FLOWER_POT_PROPS);
     public static final Block MIDNIGHT_MOONBLOOM = new FlowerBlock(MobEffects.NIGHT_VISION, 12, DEFAULT_FLOWER_PROPS);
@@ -30,6 +32,10 @@ public class ModdedBlocks {
     public static final Block WAX_FLOWER_POT = new FlowerPotBlock(WAX_FLOWER, DEFAULT_FLOWER_POT_PROPS);
     public static final Block PINK_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
     public static final Block RED_FIREWEED = new TallFlowerBlock(DEFAULT_FLOWER_PROPS);
+    public static final Block DREAM_ROSE = new FlowerBlock(MobEffects.BLINDNESS, 2, DEFAULT_FLOWER_PROPS);
+    public static final Block DREAM_ROSE_POT = new FlowerPotBlock(DREAM_ROSE, DEFAULT_FLOWER_POT_PROPS);
+    public static final Block RED_ROSE = new FlowerBlock(MobEffects.BLINDNESS, 2, DEFAULT_FLOWER_PROPS);
+    public static final Block RED_ROSE_POT = new FlowerPotBlock(RED_ROSE, DEFAULT_FLOWER_POT_PROPS);
     public static final Block SOULBULBS = new SoulSandFlower(MobEffects.INVISIBILITY, 5, DEFAULT_FLOWER_PROPS.lightLevel((blockState) -> 4));
     public static final Block SOULBULBS_POT = new FlowerPotBlock(SOULBULBS, DEFAULT_FLOWER_POT_PROPS.lightLevel((blockState) -> 4));
     public static final Block SOULWEED = new TallSoulSandFlower(DEFAULT_FLOWER_PROPS.lightLevel((blockState) -> 4));
@@ -42,6 +48,10 @@ public class ModdedBlocks {
             blockListCache = Set.of(
                     Map.entry(getLoc("blood_poppy"), BLOOD_POPPY),
                     Map.entry(getLoc("blood_poppy_pot"), BLOOD_POPPY_POT),
+                    Map.entry(getLoc("doom_poppy"), DOOM_POPPY),
+                    Map.entry(getLoc("doom_poppy_pot"), DOOM_POPPY_POT),
+                    Map.entry(getLoc("dream_rose"), DREAM_ROSE),
+                    Map.entry(getLoc("dream_rose_pot"), DREAM_ROSE_POT),
                     Map.entry(getLoc("fire_lily"), FIRE_LILY),
                     Map.entry(getLoc("fire_lily_pot"), FIRE_LILY_POT),
                     Map.entry(getLoc("midnight_moonbloom"), MIDNIGHT_MOONBLOOM),
@@ -50,6 +60,8 @@ public class ModdedBlocks {
                     Map.entry(getLoc("mint_skylight_pot"), MINT_SKYLIGHT_POT),
                     Map.entry(getLoc("pink_fireweed"), PINK_FIREWEED),
                     Map.entry(getLoc("red_fireweed"), RED_FIREWEED),
+                    Map.entry(getLoc("red_rose"), RED_ROSE),
+                    Map.entry(getLoc("red_rose_pot"), RED_ROSE_POT),
                     Map.entry(getLoc("roseate_bloom"), ROSEATE_BLOOM),
                     Map.entry(getLoc("roseate_bloom_pot"), ROSEATE_BLOOM_POT),
                     Map.entry(getLoc("soulbulbs"), SOULBULBS),
