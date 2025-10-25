@@ -16,6 +16,11 @@ import java.util.Set;
 public class ModdedBlocks {
     private static final BlockBehaviour.Properties DEFAULT_FLOWER_PROPS = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).ignitedByLava().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).noOcclusion();
     private static final BlockBehaviour.Properties DEFAULT_FLOWER_POT_PROPS = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY);
+
+    private static final BlockBehaviour.Properties GLOWING_FLOWER_PROPS = BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).ignitedByLava().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).lightLevel(state -> 15).noOcclusion();
+    private static final BlockBehaviour.Properties GLOWING_FLOWER_POT_PROPS = BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).lightLevel(state -> 15);
+
+
     public static final Block BLOOD_POPPY = new FlowerBlock(MobEffects.NIGHT_VISION, 5, DEFAULT_FLOWER_PROPS);
     public static final Block BLOOD_POPPY_POT = new FlowerPotBlock(BLOOD_POPPY, DEFAULT_FLOWER_POT_PROPS);
     public static final Block DOOM_POPPY = new FlowerBlock(MobEffects.NIGHT_VISION, 5, DEFAULT_FLOWER_PROPS);
@@ -24,8 +29,8 @@ public class ModdedBlocks {
     public static final Block FIRE_LILY_POT = new FlowerPotBlock(FIRE_LILY, DEFAULT_FLOWER_POT_PROPS);
     public static final Block MIDNIGHT_MOONBLOOM = new FlowerBlock(MobEffects.NIGHT_VISION, 12, DEFAULT_FLOWER_PROPS);
     public static final Block MIDNIGHT_MOONBLOOM_POT = new FlowerPotBlock(MIDNIGHT_MOONBLOOM, DEFAULT_FLOWER_POT_PROPS);
-    public static final Block MINT_SKYLIGHT = new FlowerBlock(MobEffects.FIRE_RESISTANCE, 4, DEFAULT_FLOWER_PROPS);
-    public static final Block MINT_SKYLIGHT_POT = new FlowerPotBlock(MINT_SKYLIGHT, DEFAULT_FLOWER_POT_PROPS);
+    public static final Block MINT_SKYLIGHT = new FlowerBlock(MobEffects.FIRE_RESISTANCE, 4, GLOWING_FLOWER_PROPS);
+    public static final Block MINT_SKYLIGHT_POT = new FlowerPotBlock(MINT_SKYLIGHT, GLOWING_FLOWER_POT_PROPS);
     public static final Block ROSEATE_BLOOM = new FlowerBlock(MobEffects.WEAKNESS, 9, DEFAULT_FLOWER_PROPS);
     public static final Block ROSEATE_BLOOM_POT = new FlowerPotBlock(ROSEATE_BLOOM, DEFAULT_FLOWER_POT_PROPS);
     public static final Block WAX_FLOWER = new FlowerBlock(MobEffects.SATURATION, 7, DEFAULT_FLOWER_PROPS);
