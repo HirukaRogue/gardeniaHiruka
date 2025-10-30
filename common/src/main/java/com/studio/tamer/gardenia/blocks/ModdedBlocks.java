@@ -1,5 +1,7 @@
 package com.studio.tamer.gardenia.blocks;
 
+import com.studio.tamer.gardenia.blocks.glowingflower.GlowingFlowerBlock;
+import com.studio.tamer.gardenia.blocks.glowingflower.GlowingFlowerPotBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -29,8 +31,8 @@ public class ModdedBlocks {
     public static final Block FIRE_LILY_POT = new FlowerPotBlock(FIRE_LILY, DEFAULT_FLOWER_POT_PROPS);
     public static final Block MIDNIGHT_MOONBLOOM = new FlowerBlock(MobEffects.NIGHT_VISION, 12, DEFAULT_FLOWER_PROPS);
     public static final Block MIDNIGHT_MOONBLOOM_POT = new FlowerPotBlock(MIDNIGHT_MOONBLOOM, DEFAULT_FLOWER_POT_PROPS);
-    public static final Block MINT_SKYLIGHT = new FlowerBlock(MobEffects.FIRE_RESISTANCE, 4, GLOWING_FLOWER_PROPS);
-    public static final Block MINT_SKYLIGHT_POT = new FlowerPotBlock(MINT_SKYLIGHT, GLOWING_FLOWER_POT_PROPS);
+    public static final Block MINT_SKYLIGHT = new GlowingFlowerBlock(MobEffects.FIRE_RESISTANCE, 4, GLOWING_FLOWER_PROPS);
+    public static final Block MINT_SKYLIGHT_POT = new GlowingFlowerPotBlock(MINT_SKYLIGHT, GLOWING_FLOWER_POT_PROPS);
     public static final Block ROSEATE_BLOOM = new FlowerBlock(MobEffects.WEAKNESS, 9, DEFAULT_FLOWER_PROPS);
     public static final Block ROSEATE_BLOOM_POT = new FlowerPotBlock(ROSEATE_BLOOM, DEFAULT_FLOWER_POT_PROPS);
     public static final Block WAX_FLOWER = new FlowerBlock(MobEffects.SATURATION, 7, DEFAULT_FLOWER_PROPS);

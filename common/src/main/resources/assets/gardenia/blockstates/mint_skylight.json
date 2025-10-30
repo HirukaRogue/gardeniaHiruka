@@ -1,7 +1,6 @@
 {
-  "variants": {
-    "": {
-      "model": "gardenia:block/mint_skylight"
-    }
-  }
+  "multipart": [
+    { "apply": { "model": "gardenia:block/mint_skylight" } },
+    { "apply": { "model": "gardenia:block/mint_skylight_emissive" } }
+  ]
 }

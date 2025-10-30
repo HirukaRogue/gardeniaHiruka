@@ -1,6 +1,7 @@
 package com.studio.tamer.gardenia;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
+import com.studio.tamer.gardenia.client.RenderLayerType;
 import com.studio.tamer.gardenia.items.ModdedItems;
 import com.studio.tamer.gardenia.platform.Services;
 import net.minecraft.network.chat.Component;
@@ -37,6 +38,24 @@ public class CommonGardenia {
     // write the majority of your code here and load it from your loader specific projects. This example has some
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
+        Services.PLATFORM.setBlockRenderLayer(
+                ModdedBlocks.MINT_SKYLIGHT,
+                RenderLayerType.CUTOUT
+        );
 
+        Services.PLATFORM.setBlockRenderLayer(
+                ModdedBlocks.MINT_SKYLIGHT,
+                RenderLayerType.TRANSLUCENT
+        );
+
+        Services.PLATFORM.setBlockRenderLayer(
+                ModdedBlocks.MINT_SKYLIGHT_POT,
+                RenderLayerType.CUTOUT
+        );
+
+        Services.PLATFORM.setBlockRenderLayer(
+                ModdedBlocks.MINT_SKYLIGHT_POT,
+                RenderLayerType.TRANSLUCENT
+        );
     }
 }
