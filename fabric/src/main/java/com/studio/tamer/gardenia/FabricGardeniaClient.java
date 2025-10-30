@@ -1,12 +1,11 @@
 package com.studio.tamer.gardenia;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
-import com.studio.tamer.gardenia.blocks.glowingflower.models.EmissiveBakedModel;
+import com.studio.tamer.gardenia.blocks.glowingflower.models.FlowerEmissiveBakedModel;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin;
 import net.fabricmc.fabric.impl.blockrenderlayer.BlockRenderLayerMapImpl;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FlowerBlock;
@@ -31,13 +30,13 @@ public class FabricGardeniaClient implements ClientModInitializer {
                 // Aplica no modelo principal do bloco
                 if (id.getNamespace().equals(Constants.MOD_ID) &&
                         id.getPath().equals("block/mint_skylight")) {
-                    return new EmissiveBakedModel(model);
+                    return new FlowerEmissiveBakedModel(model);
                 }
 
                 // Opcional: também no item (inventory)
                 if (id.getNamespace().equals(Constants.MOD_ID) &&
                         id.getPath().equals("item/mint_skylight")) {
-                    return new EmissiveBakedModel(model);
+                    return new FlowerEmissiveBakedModel(model);
                 }
 
                 return model;

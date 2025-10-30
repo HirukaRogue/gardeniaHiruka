@@ -1,8 +1,7 @@
 package com.studio.tamer.gardenia.client;
 
 import com.studio.tamer.gardenia.Constants;
-import com.studio.tamer.gardenia.blocks.ModdedBlocks;
-import com.studio.tamer.gardenia.blocks.glowingflower.models.EmissiveBakedModel;
+import com.studio.tamer.gardenia.blocks.glowingflower.models.FlowerEmissiveBakedModel;
 import com.studio.tamer.gardenia.client.model.EmissiveBakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
@@ -29,7 +28,7 @@ public class ForgeGardeniaClient {
         );
         var original = event.getModels().get(modelLoc);
         if (original != null) {
-            event.getModels().put(modelLoc, new EmissiveBakedModel(original));
+            event.getModels().put(modelLoc, new FlowerEmissiveBakedModel(original));
         }
     }
 }

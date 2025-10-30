@@ -12,11 +12,11 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmissiveBakedModel implements BakedModel {
+public class FlowerEmissiveBakedModel implements BakedModel {
     private final BakedModel original;
     private static final int FULL_BRIGHT = 0xF000F0;
 
-    public EmissiveBakedModel(BakedModel original) {
+    public FlowerEmissiveBakedModel(BakedModel original) {
         this.original = original;
     }
 
