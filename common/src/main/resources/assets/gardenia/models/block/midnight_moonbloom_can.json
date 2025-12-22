@@ -1,0 +1,7 @@
+{
+  "parent": "gardenia:block/watering_can_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "plant": "gardenia:block/midnight_moonbloom"
+  }
+}

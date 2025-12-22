@@ -1,5 +1,6 @@
 package com.studio.tamer.gardenia;
 
+import com.studio.tamer.gardenia.datagen.BlockStateGenerator;
 import com.studio.tamer.gardenia.datagen.LootTableGenerator;
 import com.studio.tamer.gardenia.datagen.WorldGenerator;
 import com.studio.tamer.gardenia.generation.ConfiguredFeatures;
@@ -14,6 +15,7 @@ public class FabricGardeniaDataGen implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
+        pack.addProvider(BlockStateGenerator::new);
         pack.addProvider(LootTableGenerator::new);
         pack.addProvider(WorldGenerator::new);
     }

@@ -10,6 +10,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FlowerPotBlock;
 
 import java.util.function.Supplier;
@@ -23,7 +24,8 @@ public class CommonGardenia {
             .icon(()-> new ItemStack(ModdedItems.MOD_ICON))
             .displayItems(((parameters, output) -> {
                 for (BlockItem item : ModdedBlocks.blockItems) {
-                    if (!(item.getBlock() instanceof FlowerPotBlock))
+                    Block block = item.getBlock();
+                    if (!(block instanceof FlowerPotBlock) || block instanceof WateringCanPotBlock)
                         output.accept(item);
                 }
                 for (Item item : ModdedItems.itemList) {
