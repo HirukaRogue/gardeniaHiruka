@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "gardenia:block/midnight_moonbloom_can"
+    },
+    "facing=east": {
+      "model": "gardenia:block/midnight_moonbloom_can",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "gardenia:block/midnight_moonbloom_can",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gardenia:block/midnight_moonbloom_can",
+      "y": 270
+    }
+  }
+}

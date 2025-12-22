@@ -1,0 +1,6 @@
+{
+  "parent": "gardenia:block/watering_can_cross",
+  "textures": {
+    "plant": "gardenia:block/blood_poppy"
+  }
+}

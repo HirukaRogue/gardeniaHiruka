@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "gardenia:block/warped_roots_can",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gardenia:block/warped_roots_can"
+    },
+    "facing=south": {
+      "model": "gardenia:block/warped_roots_can",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gardenia:block/warped_roots_can",
+      "y": 270
+    }
+  }
+}

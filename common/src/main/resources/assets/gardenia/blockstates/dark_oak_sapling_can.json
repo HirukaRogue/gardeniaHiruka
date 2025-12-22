@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "gardenia:block/dark_oak_sapling_can",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gardenia:block/dark_oak_sapling_can"
+    },
+    "facing=south": {
+      "model": "gardenia:block/dark_oak_sapling_can",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gardenia:block/dark_oak_sapling_can",
+      "y": 270
+    }
+  }
+}
