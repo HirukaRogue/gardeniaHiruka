@@ -1,0 +1,6 @@
+{
+  "parent": "gardenia:block/watering_can_cross",
+  "textures": {
+    "plant": "minecraft:block/pink_tulip"
+  }
+}

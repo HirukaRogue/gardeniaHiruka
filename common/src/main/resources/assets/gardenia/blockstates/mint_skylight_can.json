@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "gardenia:block/mint_skylight_can"
+    },
+    "facing=east": {
+      "model": "gardenia:block/mint_skylight_can",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "gardenia:block/mint_skylight_can",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gardenia:block/mint_skylight_can",
+      "y": 270
+    }
+  }
+}

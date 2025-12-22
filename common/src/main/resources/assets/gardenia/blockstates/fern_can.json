@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "gardenia:block/fern_can",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gardenia:block/fern_can"
+    },
+    "facing=south": {
+      "model": "gardenia:block/fern_can",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gardenia:block/fern_can",
+      "y": 270
+    }
+  }
+}
