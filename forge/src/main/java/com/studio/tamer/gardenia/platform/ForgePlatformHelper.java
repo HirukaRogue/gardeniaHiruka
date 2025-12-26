@@ -1,6 +1,5 @@
 package com.studio.tamer.gardenia.platform;
 
-import com.studio.tamer.gardenia.client.RenderLayerType;
 import com.studio.tamer.gardenia.platform.services.IPlatformHelper;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -40,17 +39,5 @@ public class ForgePlatformHelper implements IPlatformHelper {
     @Override
     public Supplier<CreativeModeTab> registerTab(ResourceLocation resourceLocation, Function<CreativeModeTab.Builder, CreativeModeTab> creativeTabOptions) {
         return CREATIVE_MODE_TABS.register(resourceLocation.getPath(), () -> creativeTabOptions.apply(CreativeModeTab.builder()));
-    }
-
-    @Override
-    public void setBlockRenderLayer(Block block, RenderLayerType layer) {
-        if (FMLEnvironment.dist == Dist.CLIENT) {
-            RenderType type = switch (layer) {
-                case CUTOUT     -> net.minecraft.client.renderer.RenderType.cutout();
-                case TRANSLUCENT-> net.minecraft.client.renderer.RenderType.translucent();
-                case SOLID      -> net.minecraft.client.renderer.RenderType.solid();
-            };
-            ItemBlockRenderTypes.setRenderLayer(block, type);
-        }
     }
 }

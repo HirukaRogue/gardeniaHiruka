@@ -1,9 +1,7 @@
 package com.studio.tamer.gardenia.platform.services;
 
-import com.studio.tamer.gardenia.client.RenderLayerType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.Block;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -43,7 +41,4 @@ public interface IPlatformHelper {
     }
 
     Supplier<CreativeModeTab> registerTab(ResourceLocation resourceLocation, Function<CreativeModeTab.Builder,CreativeModeTab> creativeTabOptions);
-
-    void setBlockRenderLayer(net.minecraft.world.level.block.Block block,
-                             RenderLayerType layer);
 }

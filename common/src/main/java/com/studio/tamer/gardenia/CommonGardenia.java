@@ -1,7 +1,6 @@
 package com.studio.tamer.gardenia;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
-import com.studio.tamer.gardenia.client.RenderLayerType;
 import com.studio.tamer.gardenia.items.ModdedItems;
 import com.studio.tamer.gardenia.platform.Services;
 import net.minecraft.network.chat.Component;
@@ -20,44 +19,12 @@ import java.util.function.Supplier;
 // common compatible binaries. This means common code can not directly use loader specific concepts such as Forge events
 // however it will be compatible with all supported mod loaders.
 public class CommonGardenia {
-    public static Supplier<CreativeModeTab> creativeTab = Services.PLATFORM.registerTab(new ResourceLocation("gardenia","gardenia_creative_tab"), (builder) -> {return builder
-            .icon(()-> new ItemStack(ModdedItems.MOD_ICON))
-            .displayItems(((parameters, output) -> {
-                for (BlockItem item : ModdedBlocks.blockItems) {
-                    Block block = item.getBlock();
-                    if (!(block instanceof FlowerPotBlock) || block instanceof WateringCanPotBlock)
-                        output.accept(item);
-                }
-                for (Item item : ModdedItems.itemList) {
-                    output.accept(item);
-                }
-            }))
-            .title(Component.translatable("creativetab.gardenia"))
-            .build();
-    });
+
 
     // The loader specific projects are able to import and use any code from the common project. This allows you to
     // write the majority of your code here and load it from your loader specific projects. This example has some
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
-        Services.PLATFORM.setBlockRenderLayer(
-                ModdedBlocks.MINT_SKYLIGHT,
-                RenderLayerType.CUTOUT
-        );
 
-        Services.PLATFORM.setBlockRenderLayer(
-                ModdedBlocks.MINT_SKYLIGHT,
-                RenderLayerType.TRANSLUCENT
-        );
-
-        Services.PLATFORM.setBlockRenderLayer(
-                ModdedBlocks.MINT_SKYLIGHT_POT,
-                RenderLayerType.CUTOUT
-        );
-
-        Services.PLATFORM.setBlockRenderLayer(
-                ModdedBlocks.MINT_SKYLIGHT_POT,
-                RenderLayerType.TRANSLUCENT
-        );
     }
 }

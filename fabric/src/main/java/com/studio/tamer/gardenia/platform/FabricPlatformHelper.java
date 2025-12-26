@@ -1,12 +1,10 @@
 package com.studio.tamer.gardenia.platform;
 
-import com.studio.tamer.gardenia.client.RenderLayerType;
 import com.studio.tamer.gardenia.platform.services.IPlatformHelper;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
