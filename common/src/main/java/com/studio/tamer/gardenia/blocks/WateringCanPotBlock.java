@@ -64,7 +64,7 @@ public class WateringCanPotBlock extends FlowerPotBlock {
                     player.drop(itemstack1, false);
                 }
 
-                level.setBlock(pos, Blocks.FLOWER_POT.defaultBlockState(), 3);
+                level.setBlock(pos, ModdedBlocks.WATERING_CAN.defaultBlockState(), 3);
             }
 
             level.gameEvent(player, GameEvent.BLOCK_CHANGE, pos);

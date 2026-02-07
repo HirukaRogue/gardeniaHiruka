@@ -1,6 +1,7 @@
 package com.studio.tamer.gardenia;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
+import com.studio.tamer.gardenia.blocks.WateringCanPotBlock;
 import com.studio.tamer.gardenia.items.ModdedItems;
 import com.studio.tamer.gardenia.platform.Services;
 import net.minecraft.network.chat.Component;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 
 import java.util.function.Supplier;
@@ -19,6 +21,24 @@ import java.util.function.Supplier;
 // common compatible binaries. This means common code can not directly use loader specific concepts such as Forge events
 // however it will be compatible with all supported mod loaders.
 public class CommonGardenia {
+    public static Supplier<CreativeModeTab> creativeTab = Services.PLATFORM.registerTab(new ResourceLocation("gardenia","gardenia_creative_tab"), (builder) -> {return builder
+            .icon(()-> new ItemStack(ModdedItems.MOD_ICON))
+            .displayItems(((parameters, output) -> {
+                for (BlockItem item : ModdedBlocks.blockItems) {
+                    Block block = item.getBlock();
+                    if (!(block instanceof FlowerPotBlock))
+                        output.accept(item);
+                    if (block instanceof WateringCanPotBlock wateringCanPotBlock && wateringCanPotBlock.getContent() == Blocks.AIR) {
+                        output.accept(item);
+                    }
+                }
+                for (Item item : ModdedItems.itemList) {
+                    output.accept(item);
+                }
+            }))
+            .title(Component.translatable("creativetab.gardenia"))
+            .build();
+    });
 
 
     // The loader specific projects are able to import and use any code from the common project. This allows you to

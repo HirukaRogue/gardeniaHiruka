@@ -1,5 +1,5 @@
 {
-  "parent": "gardenia:block/watering_can_cross",
+  "parent": "gardenia:block/watering_can_cross_tinted",
   "textures": {
     "plant": "minecraft:block/fern"
   }

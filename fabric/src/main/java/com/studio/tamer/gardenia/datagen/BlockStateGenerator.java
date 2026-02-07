@@ -40,7 +40,6 @@ public class BlockStateGenerator extends FabricModelProvider {
             createPlantWateringCan(blockStateModelGenerator, Blocks.RED_MUSHROOM, ModdedBlocks.RED_MUSHROOM_CAN);
             createPlantWateringCan(blockStateModelGenerator, Blocks.CRIMSON_FUNGUS, ModdedBlocks.CRIMSON_FUNGUS_CAN);
             createPlantWateringCan(blockStateModelGenerator, Blocks.WARPED_FUNGUS, ModdedBlocks.WARPED_FUNGUS_CAN);
-            createPlantWateringCan(blockStateModelGenerator, Blocks.FERN, ModdedBlocks.FERN_CAN);
             createPlantWateringCan(blockStateModelGenerator, Blocks.DEAD_BUSH, ModdedBlocks.DEAD_BUSH_CAN);
             createPlantWateringCan(blockStateModelGenerator, Blocks.DANDELION, ModdedBlocks.DANDELION_CAN);
             createPlantWateringCan(blockStateModelGenerator, Blocks.POPPY, ModdedBlocks.POPPY_CAN);
@@ -58,12 +57,19 @@ public class BlockStateGenerator extends FabricModelProvider {
             createPlantWateringCan(blockStateModelGenerator, Blocks.TORCHFLOWER, ModdedBlocks.TORCHFLOWER_CAN);
             createPlantWateringCan(blockStateModelGenerator, Blocks.WITHER_ROSE, ModdedBlocks.WITHER_ROSE_CAN);
             createPlantWateringCan(blockStateModelGenerator, Blocks.CRIMSON_ROOTS, ModdedBlocks.CRIMSON_ROOTS_CAN);
+            createPlantWateringCanTinted(blockStateModelGenerator, Blocks.FERN, ModdedBlocks.FERN_CAN);
         }
     }
 
     public final void createPlantWateringCan(BlockModelGenerators generators, Block plantBlock, Block pottedPlantBlock) {
         TextureMapping textureMapping = TextureMapping.plant(plantBlock);
         ResourceLocation resourceLocation = createModelTemplate("watering_can_cross", TextureSlot.PLANT).create(pottedPlantBlock, textureMapping, generators.modelOutput);
+        generators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(pottedPlantBlock, resourceLocation).with(createHorizontalFacingDispatch()));
+    }
+
+    public final void createPlantWateringCanTinted(BlockModelGenerators generators, Block plantBlock, Block pottedPlantBlock) {
+        TextureMapping textureMapping = TextureMapping.plant(plantBlock);
+        ResourceLocation resourceLocation = createModelTemplate("watering_can_cross_tinted", TextureSlot.PLANT).create(pottedPlantBlock, textureMapping, generators.modelOutput);
         generators.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(pottedPlantBlock, resourceLocation).with(createHorizontalFacingDispatch()));
     }
 

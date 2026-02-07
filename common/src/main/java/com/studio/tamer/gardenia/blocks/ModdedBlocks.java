@@ -1,7 +1,5 @@
 package com.studio.tamer.gardenia.blocks;
 
-import com.studio.tamer.gardenia.blocks.glowingflower.GlowingFlowerBlock;
-import com.studio.tamer.gardenia.blocks.glowingflower.GlowingFlowerPotBlock;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -96,7 +94,7 @@ public class ModdedBlocks {
 
     public static Set<Map.Entry<ResourceLocation, Block>> getBlockListWithID() {
         if (blockListCache == null)
-            blockListCache = Set.of(
+            blockListCache = Set.<Map.Entry<ResourceLocation, Block>>of(
                     Map.entry(getLoc("blood_poppy"), BLOOD_POPPY),
                     Map.entry(getLoc("blood_poppy_pot"), BLOOD_POPPY_POT),
                     Map.entry(getLoc("blood_poppy_can"), BLOOD_POPPY_CAN),

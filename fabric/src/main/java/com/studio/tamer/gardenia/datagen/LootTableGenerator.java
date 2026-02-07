@@ -1,10 +1,21 @@
 package com.studio.tamer.gardenia.datagen;
 
 import com.studio.tamer.gardenia.blocks.ModdedBlocks;
+import com.studio.tamer.gardenia.blocks.WateringCanPotBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+
+import java.util.Map;
 
 public class LootTableGenerator extends FabricBlockLootTableProvider {
     public LootTableGenerator(FabricDataOutput dataOutput) {
@@ -33,8 +44,24 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         dropPottedContents(ModdedBlocks.WAX_FLOWER_POT);
         dropSelf(ModdedBlocks.SOULBULBS);
         dropPottedContents(ModdedBlocks.SOULBULBS_POT);
+        for (Map.Entry<ResourceLocation, Block> blockEntry : ModdedBlocks.getBlockListWithID()) {
+            if (blockEntry.getValue() instanceof WateringCanPotBlock wateringCanPotBlock) {
+                if (wateringCanPotBlock.getContent() == Blocks.AIR)
+                    dropSelf(wateringCanPotBlock);
+                else
+                    dropWateringCanContents(wateringCanPotBlock);
+            }
+        }
         add(ModdedBlocks.PINK_FIREWEED, createSinglePropConditionTable(ModdedBlocks.PINK_FIREWEED, BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
         add(ModdedBlocks.RED_FIREWEED, createSinglePropConditionTable(ModdedBlocks.RED_FIREWEED, BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
         add(ModdedBlocks.SOULWEED, createSinglePropConditionTable(ModdedBlocks.SOULWEED, BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
+    }
+
+    public void dropWateringCanContents(WateringCanPotBlock can) {
+        this.add(can, (block) -> createWateringCanItemTable(can.getContent()));
+    }
+
+    public LootTable.Builder createWateringCanItemTable(ItemLike item) {
+        return LootTable.lootTable().withPool(this.applyExplosionCondition(ModdedBlocks.WATERING_CAN, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(ModdedBlocks.WATERING_CAN)))).withPool(this.applyExplosionCondition(item, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(item))));
     }
 }
